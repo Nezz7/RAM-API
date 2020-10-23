@@ -9,7 +9,7 @@ app.config["DEBUG"] = True
 def home():
     return "<h1>RAM API</h1><p> Welcome to the RAM API</p>"
 
-@app.route('/sys', methods=['GET'])
+@app.route('/metrics', methods=['GET'])
 def system():
     return {
         "cpu_percent" : psutil.cpu_percent(),
